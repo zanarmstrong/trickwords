@@ -232,12 +232,12 @@
   <div id="word-counter">1 / 48</div>
   <div id="spoken-flash"></div>
   <div id="controls">
+    <button class="ctrl-btn" id="check-btn">🔊 Say it</button>
     <div id="controls-row">
       <button class="ctrl-btn nav-btn" id="back-btn">←</button>
-      <button class="ctrl-btn" id="check-btn">🔊 Say it</button>
+      <button class="ctrl-btn" id="firework-btn">🎆</button>
       <button class="ctrl-btn nav-btn" id="fwd-btn">→</button>
     </div>
-    <button class="ctrl-btn" id="firework-btn">🎆</button>
   </div>
 </div>
 
@@ -355,6 +355,14 @@ function launchFireworks(word) {
   fwParticles = [];
   fwWord.textContent = word;
   fwWord.style.opacity = '0';
+
+  // Measure the exact position of the practice word and match it
+  var wordEl = document.getElementById('word-display');
+  var rect = wordEl.getBoundingClientRect();
+  fwWord.style.top = rect.top + 'px';
+  fwWord.style.bottom = 'auto';
+  fwWord.style.transform = 'none';
+
   overlay.classList.add('active');
 
   var mode = fwShapeCounter % 3; // 0=fireworks, 1=hearts, 2=stars
