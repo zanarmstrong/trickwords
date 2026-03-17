@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trick Words</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  #setup {
+    background: #fff;
+    border-radius: 18px;
+    padding: 36px 32px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  #setup h1 { font-size: 26px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
+  #setup p { font-size: 15px; color: #555; margin-bottom: 20px; line-height: 1.5; }
+
+  #word-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 2px solid #d0d7de;
+    border-radius: 10px;
+    resize: vertical;
+    color: #1a1a1a;
+    line-height: 1.6;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #word-input:focus { border-color: #2ecc71; }
+  #word-count { font-size: 13px; color: #888; margin-top: 8px; margin-bottom: 20px; }
+
+  #start-btn {
+    width: 100%;
+    padding: 16px;
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+  }
+  #start-btn:hover { background: #27ae60; }
+  #start-btn:active { transform: scale(0.98); }
+
+  /* PRACTICE SCREEN */
+  #practice {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s;
+  }
+  #practice.active { display: flex; }
+
+  #word-display {
+    font-size: clamp(80px, 20vw, 160px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+    padding: 0 32px;
+    user-select: none;
+    animation: wordPop 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .letter {
+    display: inline-block;
+    cursor: pointer;
+    transition: font-size 0.3s cubic-bezier(0.34,1.56,0.64,1),
+                margin 0.3s cubic-bezier(0.34,1.56,0.64,1),
+                opacity 0.3s,
+                transform 0.15s cubic-bezier(0.34,1.56,0.64,1);
+    font-size: 1em;
+    line-height: 1;
+  }
+  .letter:hover:not(.zoomed) { transform: scale(1.08); }
+  .letter.zoomed {
+    font-size: 2.5em;
+    margin: 0 0.08em;
+  }
+  .letter.shrunk {
+    opacity: 0.45;
+  }
+  @keyframes wordPop {
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+
+  #word-counter { font-size: 16px; color: rgba(255,255,255,0.7); font-weight: 500; position: fixed; bottom: 22px; right: 22px; }
+
+  #controls { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; align-items: center; }
+  #controls-row { display: flex; gap: 16px; align-items: center; }
+
+  .ctrl-btn {
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    transition: transform 0.1s, opacity 0.15s;
+  }
+  .ctrl-btn:active { transform: scale(0.94); }
+  .ctrl-btn:disabled { opacity: 0.3; cursor: default; }
+
+  .nav-btn {
+    width: 64px; height: 64px;
+    font-size: 26px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  .nav-btn:hover:not(:disabled) { background: rgba(255,255,255,0.3); }
+
+  #check-btn {
+    padding: 0 20px;
+    height: 48px;
+    font-size: 14px;
+    background: #fff;
+    letter-spacing: 0.3px;
+  }
+  #check-btn:hover { opacity: 0.9; }
+
+  #firework-btn {
+    width: 64px; height: 64px;
+    font-size: 26px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+  }
+  #firework-btn:hover { background: rgba(255,255,255,0.3); }
+
+  #exit-btn {
+    position: fixed;
+    top: 20px; right: 20px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  #exit-btn:hover { background: rgba(255,255,255,0.3); }
+
+  #spoken-flash {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    margin-top: 20px;
+    height: 28px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  #spoken-flash.show { opacity: 1; }
+
+  /* FIREWORKS CANVAS OVERLAY */
+  #fw-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    z-index: 999;
+  }
+  #fw-overlay.active { display: block; }
+
+  #fw-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+  }
+
+  #fw-word {
+    position: absolute;
+    z-index: 1000;
+    left: 0; right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(80px, 20vw, 160px);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -2px;
+    text-align: center;
+    opacity: 0;
+    text-shadow: 0 0 40px rgba(255,255,255,0.8);
+    pointer-events: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div id="setup">
+  <h1>Trick Words</h1>
+  <p>Type or paste the words to practise, separated by commas. Then press Start!</p>
+  <textarea id="word-input" spellcheck="false">and, a, the, is, his, of, as, has, to, into, we, he, she, be, me, for, or, you, your, I, they, was, one, said, from, have, do, does, were, are, who, what, when, where, there, here, why, by, my, try, put, two, too, very, also, come, some</textarea>
+  <p id="word-count">48 words</p>
+  <button id="start-btn">Start ▶</button>
+</div>
+
+<div id="practice">
+  <button id="exit-btn">✕ Reset words</button>
+  <div id="word-display">word</div>
+  <div id="word-counter">1 / 48</div>
+  <div id="spoken-flash"></div>
+  <div id="controls">
+    <div id="controls-row">
+      <button class="ctrl-btn nav-btn" id="back-btn">←</button>
+      <button class="ctrl-btn" id="check-btn">🔊 Say it</button>
+      <button class="ctrl-btn nav-btn" id="fwd-btn">→</button>
+    </div>
+    <button class="ctrl-btn" id="firework-btn">🎆</button>
+  </div>
+</div>
+
+<!-- FIREWORKS OVERLAY -->
+<div id="fw-overlay">
+  <canvas id="fw-canvas"></canvas>
+  <div id="fw-word"></div>
+</div>
+
+<script>
+var BG_COLORS = [
+  '#1a6fe8','#e84040','#d4700a','#7c3aed',
+  '#0d9488','#db2777','#16a34a','#b45309',
+  '#0284c7','#9333ea'
+];
+
+var words = [], idx = 0, colorIdx = 0;
+
+// ── Speech ──
+function pickBestVoice() {
+  var voices = window.speechSynthesis.getVoices();
+  // Prefer high-quality named voices, in order of preference
+  var preferred = [
+    'Samantha', 'Karen', 'Daniel', 'Moira', 'Tessa', // macOS/iOS naturals
+    'Google US English', 'Google UK English Female', 'Google UK English Male'
+  ];
+  for (var p = 0; p < preferred.length; p++) {
+    for (var v = 0; v < voices.length; v++) {
+      if (voices[v].name.indexOf(preferred[p]) !== -1) return voices[v];
+    }
+  }
+  // Fallback: any non-compact English voice
+  var enVoices = voices.filter(function(v) {
+    return v.lang && v.lang.startsWith('en') &&
+           !v.name.toLowerCase().includes('compact') &&
+           !v.name.toLowerCase().includes('junior');
+  });
+  return enVoices.length > 0 ? enVoices[0] : null;
+}
+
+function speakWord(word) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  function doSpeak() {
+    var utt = new SpeechSynthesisUtterance(word);
+    utt.rate = 0.85; utt.pitch = 1.0; utt.volume = 1.0;
+    var voice = pickBestVoice();
+    if (voice) utt.voice = voice;
+    window.speechSynthesis.speak(utt);
+  }
+  if (window.speechSynthesis.getVoices().length > 0) { doSpeak(); }
+  else { window.speechSynthesis.onvoiceschanged = doSpeak; setTimeout(doSpeak, 300); }
+}
+
+var flashTimer = null;
+function showFlash(msg) {
+  var el = document.getElementById('spoken-flash');
+  el.textContent = msg; el.classList.add('show');
+  if (flashTimer) clearTimeout(flashTimer);
+  flashTimer = setTimeout(function(){ el.classList.remove('show'); }, 2500);
+}
+
+// ── Fireworks ──
+var canvas, ctx, fwParticles = [], fwAnimId = null, fwShapeCounter = 0;
+
+function playFireworkSound(delayMs) {
+  try {
+    var AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) return;
+    var ac = new AudioCtx();
+
+    // Single ding — called once per shape with its own delay
+    [1046.5].forEach(function(freq, i) {
+      var when = ac.currentTime + (delayMs / 1000);
+
+      // Main tone (sine for clarity)
+      var osc = ac.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+
+      // Second harmonic for a slightly richer piano-like tone
+      var osc2 = ac.createOscillator();
+      osc2.type = 'triangle';
+      osc2.frequency.value = freq * 2;
+
+      var gain = ac.createGain();
+      gain.gain.setValueAtTime(0.0, when);
+      gain.gain.linearRampToValueAtTime(0.6, when + 0.01);   // sharp attack
+      gain.gain.exponentialRampToValueAtTime(0.001, when + 1.4); // natural decay
+
+      var gain2 = ac.createGain();
+      gain2.gain.setValueAtTime(0.0, when);
+      gain2.gain.linearRampToValueAtTime(0.15, when + 0.01);
+      gain2.gain.exponentialRampToValueAtTime(0.001, when + 0.6);
+
+      osc.connect(gain);
+      gain.connect(ac.destination);
+      osc2.connect(gain2);
+      gain2.connect(ac.destination);
+
+      osc.start(when);  osc.stop(when + 1.5);
+      osc2.start(when); osc2.stop(when + 0.7);
+    });
+
+  } catch(e) { /* silently skip if audio not available */ }
+}
+
+function launchFireworks(word) {
+  var overlay = document.getElementById('fw-overlay');
+  var fwWord  = document.getElementById('fw-word');
+  canvas = document.getElementById('fw-canvas');
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  ctx = canvas.getContext('2d');
+  fwParticles = [];
+  fwWord.textContent = word;
+  fwWord.style.opacity = '0';
+  overlay.classList.add('active');
+
+  var mode = fwShapeCounter % 3; // 0=fireworks, 1=hearts, 2=stars
+  fwShapeCounter++;
+  var shapeCount = 3 + Math.floor(Math.random() * 4); // 3-6
+
+  var stagger = mode === 0 ? 300 : 180;
+  for (var si = 0; si < shapeCount; si++) {
+    playFireworkSound(si * stagger);
+  }
+
+  if (mode === 0) {
+    runFireworks(shapeCount);
+  } else if (mode === 1) {
+    runBigShapes('hearts', shapeCount);
+  } else {
+    runBigShapes('stars', shapeCount);
+  }
+
+  // Word fades in at 1.4s
+  setTimeout(function(){
+    fwWord.style.transition = 'opacity 0.5s';
+    fwWord.style.opacity = '1';
+  }, 1300);
+
+  // Fade out at 3.2s
+  setTimeout(function(){
+    fwWord.style.transition = 'opacity 0.6s';
+    fwWord.style.opacity = '0';
+  }, 3200);
+
+  // Hide overlay at 3.8s
+  setTimeout(function(){
+    overlay.classList.remove('active');
+    if (fwAnimId) { cancelAnimationFrame(fwAnimId); fwAnimId = null; }
+    fwParticles = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }, 3800);
+}
+
+// ── MODE 0: Fireworks ──
+var allPalettes = [
+  ['#ff6b6b','#ffd93d','#ff9f43','#ff6b81'],
+  ['#a29bfe','#fd79a8','#fdcb6e','#74b9ff'],
+  ['#55efc4','#81ecec','#00cec9','#fdcb6e'],
+  ['#ff7675','#e17055','#fdcb6e','#fab1a0'],
+  ['#fd79a8','#e84393','#a29bfe','#ffffff'],
+  ['#00b894','#00cec9','#55efc4','#81ecec'],
+  ['#ffeaa7','#fdcb6e','#e17055','#d63031'],
+  ['#74b9ff','#0984e3','#a29bfe','#ffffff'],
+];
+function randPalette() { return allPalettes[Math.floor(Math.random() * allPalettes.length)]; }
+function randPos() {
+  return { x: canvas.width * (0.15 + Math.random() * 0.7), y: canvas.height * (0.1 + Math.random() * 0.5) };
+}
+
+function runFireworks(count) {
+  for (var i = 0; i < count; i++) {
+    (function(idx) {
+      var pos = randPos();
+      setTimeout(function(){ burst(pos.x, pos.y, randPalette()); }, idx * 300);
+    })(i);
+  }
+  animateParticles();
+}
+
+function burst(x, y, palette) {
+  var count = 90;
+  for (var i = 0; i < count; i++) {
+    var angle = (Math.PI * 2 / count) * i + (Math.random() - 0.5) * 0.2;
+    var speed = 3 + Math.random() * 5;
+    fwParticles.push({
+      x: x, y: y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      alpha: 1,
+      radius: 3 + Math.random() * 3,
+      color: palette[Math.floor(Math.random() * palette.length)],
+      gravity: 0.08,
+      decay: 0.013 + Math.random() * 0.007,
+      trail: []
+    });
+  }
+  ctx.save();
+  ctx.globalAlpha = 0.9;
+  var grad = ctx.createRadialGradient(x, y, 0, x, y, 60);
+  grad.addColorStop(0, '#fff');
+  grad.addColorStop(0.3, palette[0]);
+  grad.addColorStop(1, 'transparent');
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.arc(x, y, 60, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+}
+
+function animateParticles() {
+  fwAnimId = requestAnimationFrame(animateParticles);
+  ctx.fillStyle = 'rgba(0,0,0,0.18)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  for (var i = fwParticles.length - 1; i >= 0; i--) {
+    var p = fwParticles[i];
+    p.trail.push({ x: p.x, y: p.y, alpha: p.alpha });
+    if (p.trail.length > 6) p.trail.shift();
+    for (var t = 0; t < p.trail.length; t++) {
+      var tr = p.trail[t];
+      ctx.beginPath();
+      ctx.arc(tr.x, tr.y, p.radius * 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = tr.alpha * 0.25 * (t / p.trail.length);
+      ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.globalAlpha = p.alpha;
+    ctx.fill();
+    p.vx *= 0.97; p.vy *= 0.97; p.vy += p.gravity;
+    p.x += p.vx; p.y += p.vy;
+    p.alpha -= p.decay;
+    if (p.alpha <= 0) fwParticles.splice(i, 1);
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ── MODE 1 & 2: Big Hearts / Stars ──
+var bigShapes = [];   // { x, y, color, scale, alpha, targetScale }
+var bigShapeAnimId = null;
+
+var heartColors = ['#ff4d6d','#ff85a1','#ff6b9d','#c9184a','#ffb3c1','#ff0a54'];
+var starColors  = ['#ffd700','#ffb703','#fb8500','#ff6b35','#ffe066','#ffca3a'];
+
+function runBigShapes(type, count) {
+  bigShapes = [];
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  var colors = type === 'hearts' ? heartColors : starColors;
+  var W = canvas.width, H = canvas.height;
+
+  // Fully random positions across the screen
+  for (var i = 0; i < count; i++) {
+    bigShapes.push({
+      x: W * (0.12 + Math.random() * 0.76),
+      y: H * (0.12 + Math.random() * 0.55),
+      color: colors[i % colors.length],
+      scale: 0,
+      targetScale: 80 + Math.random() * 40,
+      alpha: 0,
+      type: type,
+      delay: i * 180  // stagger appearance
+    });
+  }
+
+  var startTime = Date.now();
+
+  function animateBigShapes() {
+    bigShapeAnimId = requestAnimationFrame(animateBigShapes);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    var now = Date.now() - startTime;
+
+    for (var i = 0; i < bigShapes.length; i++) {
+      var s = bigShapes[i];
+      var elapsed = now - s.delay;
+      if (elapsed < 0) continue;
+
+      // Pop in over 400ms, hold, then fade out after 2800ms total
+      if (elapsed < 400) {
+        // overshoot spring-like pop
+        var progress = elapsed / 400;
+        s.scale = s.targetScale * (1 + 0.25 * Math.sin(progress * Math.PI));
+        s.alpha = Math.min(1, progress * 3);
+      } else if (elapsed < 2600) {
+        s.scale = s.targetScale;
+        s.alpha = 1;
+      } else {
+        var fadeProgress = (elapsed - 2600) / 600;
+        s.alpha = Math.max(0, 1 - fadeProgress);
+        s.scale = s.targetScale;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = s.alpha;
+      ctx.fillStyle = s.color;
+      ctx.translate(s.x, s.y);
+
+      if (s.type === 'hearts') {
+        drawBigHeart(s.scale);
+      } else {
+        drawBigStar(s.scale);
+      }
+      ctx.fill();
+      ctx.restore();
+    }
+
+    // Stop when all faded
+    var allDone = bigShapes.every(function(s) {
+      return (Date.now() - startTime - s.delay) > 3200;
+    });
+    if (allDone) {
+      cancelAnimationFrame(bigShapeAnimId);
+      bigShapeAnimId = null;
+    }
+  }
+  animateBigShapes();
+}
+
+function drawBigHeart(r) {
+  var s = r / 14;
+  ctx.scale(s, s);
+  ctx.beginPath();
+  ctx.moveTo(0, -4);
+  ctx.bezierCurveTo(6, -14, 18, -4, 0, 12);
+  ctx.bezierCurveTo(-18, -4, -6, -14, 0, -4);
+  ctx.closePath();
+}
+
+function drawBigStar(r) {
+  var spikes = 5;
+  ctx.beginPath();
+  for (var s = 0; s < spikes * 2; s++) {
+    var ang = (s * Math.PI / spikes) - Math.PI / 2;
+    var rad = s % 2 === 0 ? r : r * 0.42;
+    if (s === 0) ctx.moveTo(Math.cos(ang) * rad, Math.sin(ang) * rad);
+    else ctx.lineTo(Math.cos(ang) * rad, Math.sin(ang) * rad);
+  }
+  ctx.closePath();
+}
+
+// ── Setup / Practice ──
+function shuffle(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+function parseWords(val) {
+  return val.split(',').map(function(w){ return w.trim(); }).filter(function(w){ return w.length > 0; });
+}
+
+var wordInput   = document.getElementById('word-input');
+var wordCount   = document.getElementById('word-count');
+var startBtn    = document.getElementById('start-btn');
+var practice    = document.getElementById('practice');
+var setup       = document.getElementById('setup');
+var wordDisplay = document.getElementById('word-display');
+var counter     = document.getElementById('word-counter');
+var backBtn     = document.getElementById('back-btn');
+var fwdBtn      = document.getElementById('fwd-btn');
+var checkBtn    = document.getElementById('check-btn');
+var exitBtn     = document.getElementById('exit-btn');
+var fireworkBtn = document.getElementById('firework-btn');
+
+wordInput.addEventListener('input', function() {
+  var w = parseWords(wordInput.value);
+  wordCount.textContent = w.length + ' word' + (w.length === 1 ? '' : 's');
+});
+
+startBtn.addEventListener('click', function() {
+  words = shuffle(parseWords(wordInput.value));
+  if (words.length === 0) return;
+  idx = 0; colorIdx = 0;
+  if (window.speechSynthesis) {
+    var primer = new SpeechSynthesisUtterance('');
+    primer.volume = 0;
+    window.speechSynthesis.speak(primer);
+  }
+  practice.classList.add('active');
+  setup.style.display = 'none';
+  showWord();
+});
+
+exitBtn.addEventListener('click', function() {
+  practice.classList.remove('active');
+  setup.style.display = '';
+  if (window.speechSynthesis) window.speechSynthesis.cancel();
+});
+
+fwdBtn.addEventListener('click', function() {
+  if (idx < words.length - 1) { idx++; colorIdx = (colorIdx+1) % BG_COLORS.length; showWord(); }
+});
+backBtn.addEventListener('click', function() {
+  if (idx > 0) { idx--; colorIdx = (colorIdx - 1 + BG_COLORS.length) % BG_COLORS.length; showWord(); }
+});
+checkBtn.addEventListener('click', function() {
+  speakWord(words[idx]);
+  showFlash('🔊  ' + words[idx]);
+});
+fireworkBtn.addEventListener('click', function() {
+  launchFireworks(words[idx]);
+});
+
+var zoomedLetterIdx = -1;
+
+function showWord() {
+  wordDisplay.style.animation = 'none';
+  wordDisplay.offsetHeight;
+  wordDisplay.style.animation = '';
+  zoomedLetterIdx = -1;
+  renderLetters(words[idx]);
+  counter.textContent = (idx+1) + ' / ' + words.length;
+  practice.style.background = BG_COLORS[colorIdx];
+  checkBtn.style.color = BG_COLORS[colorIdx];
+  backBtn.disabled = idx === 0;
+  fwdBtn.disabled  = idx === words.length - 1;
+}
+
+function renderLetters(word) {
+  wordDisplay.innerHTML = '';
+  word.split('').forEach(function(ch, i) {
+    var span = document.createElement('span');
+    span.className = 'letter';
+    span.textContent = ch;
+    span.addEventListener('click', function() {
+      if (word.length === 1) {
+        // Single letter — just zoom it
+        if (span.classList.contains('zoomed')) {
+          span.classList.remove('zoomed');
+        } else {
+          span.classList.add('zoomed');
+        }
+        return;
+      }
+      var isZoomed = zoomedLetterIdx === i;
+      // Reset all
+      wordDisplay.querySelectorAll('.letter').forEach(function(s) {
+        s.classList.remove('zoomed', 'shrunk');
+      });
+      if (isZoomed) {
+        // Toggle off
+        zoomedLetterIdx = -1;
+      } else {
+        // Zoom this one, shrink others
+        zoomedLetterIdx = i;
+        span.classList.add('zoomed');
+        wordDisplay.querySelectorAll('.letter').forEach(function(s, j) {
+          if (j !== i) s.classList.add('shrunk');
+        });
+      }
+    });
+    wordDisplay.appendChild(span);
+  });
+}
+
+wordCount.textContent = parseWords(wordInput.value).length + ' words';
+</script>
+</body>
+</html>
