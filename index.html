@@ -9,7 +9,16 @@
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background: #1a6fe8;
+    background: repeating-linear-gradient(
+      135deg,
+      #e84040 0px,   #e84040 60px,
+      #d4700a 60px,  #d4700a 120px,
+      #f0c000 120px, #f0c000 180px,
+      #16a34a 180px, #16a34a 240px,
+      #1a6fe8 240px, #1a6fe8 300px,
+      #7c3aed 300px, #7c3aed 360px,
+      #db2777 360px, #db2777 420px
+    );
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -20,7 +29,11 @@
   #setup {
     width: 100%;
     max-width: 520px;
-    padding: 0 8px;
+    padding: 28px 32px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
   }
   #setup h1 { font-size: 36px; font-weight: 800; color: #fff; margin-bottom: 8px; }
   #setup p { font-size: 15px; color: rgba(255,255,255,0.75); margin-bottom: 20px; line-height: 1.5; }
@@ -101,6 +114,13 @@
     cursor: pointer;
     border: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  }
+
+  #setup-body {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   #start-btn {
@@ -327,15 +347,17 @@
     <button class="mode-btn" id="mode-my">My words</button>
     <button class="mode-btn" id="mode-top">Top 999</button>
   </div>
-  <p id="my-words-hint">Type or paste your own words below. Then press Start!</p>
-  <textarea id="word-input" spellcheck="false">and, a, the, is, his, of, as, has, to, into, we, he, she, be, me, for, or, you, your, I, they, was, one, said, from, have, do, does, were, are, who, what, when, where, there, here, why, by, my, try, put, two, too, very, also, come, some</textarea>
-  <div id="pool-row">
-    <span id="pool-label">Choose from top <strong id="pool-num">200</strong> most common words</span>
-    <input type="range" id="pool-slider" min="1" max="999" value="200">
-  </div>
-  <div id="slider-row">
-    <span id="slider-label">Practise <strong id="session-num">30</strong> of <span id="total-num">47</span><span id="session-suffix"> words</span></span>
-    <input type="range" id="session-slider" min="1" max="47" value="30">
+  <div id="setup-body">
+    <p id="my-words-hint">Type or paste your own words below. Then press Start!</p>
+    <textarea id="word-input" spellcheck="false">and, a, the, is, his, of, as, has, to, into, we, he, she, be, me, for, or, you, your, I, they, was, one, said, from, have, do, does, were, are, who, what, when, where, there, here, why, by, my, try, put, two, too, very, also, come, some</textarea>
+    <div id="pool-row">
+      <span id="pool-label">Select words from top <strong id="pool-num">200</strong> most commonly used English words</span>
+      <input type="range" id="pool-slider" min="50" max="950" step="50" value="200">
+    </div>
+    <div id="slider-row">
+      <span id="slider-label">Practise <strong id="session-num">30</strong> of <span id="total-num">47</span><span id="session-suffix"> words</span></span>
+      <input type="range" id="session-slider" min="1" max="47" value="30">
+    </div>
   </div>
   <button id="start-btn">Start ▶</button>
 </div>
@@ -376,7 +398,7 @@ function pickBestVoice() {
   var voices = window.speechSynthesis.getVoices();
   // Prefer high-quality named voices, in order of preference
   var preferred = [
-    'Zoe', 'Samantha', 'Karen',  'Daniel', 'Moira', 'Tessa', // macOS/iOS naturals
+    'Zoe', 'Flo', 'Shelley', 'Grandpa', 'Zoe', 'Samantha', 'Karen',  'Daniel', 'Moira', 'Tessa', // macOS/iOS naturals
     'Google US English', 'Google UK English Female', 'Google UK English Male'
   ];
   for (var p = 0; p < preferred.length; p++) {
@@ -922,7 +944,7 @@ var currentMode = 'my';
 // Load the top-words list
 fetch('top1000.txt').then(function(r) { return r.text(); }).then(function(text) {
   topWords = text.split('\n').map(function(w) { return w.trim(); }).filter(function(w) { return w.length > 0; });
-  poolSlider.max = topWords.length;
+  poolSlider.max = Math.floor(topWords.length / 50) * 50;
   if (currentMode === 'top') {
     var p = getUrlParams();
     var pool  = p.pool  !== null ? Math.min(p.pool,  topWords.length) : Math.min(DEFAULT_POOL,  topWords.length);
@@ -940,7 +962,7 @@ function getUrlParams() {
   var count = parseInt(params.get('count'), 10);
   return {
     mode:  params.get('mode') === 'top' ? 'top' : 'my',
-    pool:  isNaN(pool)  ? null : pool,
+    pool:  isNaN(pool)  ? null : Math.max(50, Math.round(pool / 50) * 50),
     count: isNaN(count) ? null : count
   };
 }
@@ -957,13 +979,13 @@ function updateSliderUI() {
   if (currentMode === 'top') {
     var pool  = parseInt(poolSlider.value, 10);
     var count = Math.min(parseInt(sessionSlider.value, 10), pool);
-    poolSlider.max      = topWords.length || 999;
+    poolSlider.max      = Math.floor((topWords.length || 999) / 50) * 50;
     sessionSlider.max   = pool;
     sessionSlider.value = count;
     poolNum.textContent    = pool;
     sessionNum.textContent = count;
     totalNum.textContent   = pool;
-    document.getElementById('session-suffix').textContent = ' of those';
+    document.getElementById('session-suffix').textContent = ' common words';
   } else {
     var total = parseWords(wordInput.value).length;
     var count = Math.min(parseInt(sessionSlider.value, 10), total || 1);
