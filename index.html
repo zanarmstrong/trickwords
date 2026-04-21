@@ -398,7 +398,7 @@ function pickBestVoice() {
   var voices = window.speechSynthesis.getVoices();
   // Prefer high-quality named voices, in order of preference
   var preferred = [
-    'Zoe', 'Flo', 'Shelley', 'Grandpa', 'Zoe', 'Samantha', 'Karen',  'Daniel', 'Moira', 'Tessa', // macOS/iOS naturals
+    'Samantha', 'Zoe', 'Flo', 'Shelley', 'Grandpa', 'Karen', 'Daniel', 'Moira', 'Tessa', // macOS/iOS naturals
     'Google US English', 'Google UK English Female', 'Google UK English Male'
   ];
   for (var p = 0; p < preferred.length; p++) {
