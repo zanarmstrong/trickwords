@@ -205,8 +205,8 @@ syncPool();
 
 // ── Practice screen ──
 
-// Each part is a column: its letters, plus a heart underneath if it's a
-// heart part. Heart parts with more than one letter are underlined.
+// Each part is a column: its letters, plus an underline and a heart
+// underneath if it's a heart part.
 function showWord() {
   // Restart the pop-in animation
   wordDisplay.style.animation = 'none';
@@ -217,7 +217,7 @@ function showWord() {
   wordDisplay.innerHTML = '';
   words[idx].parts.forEach(function(part) {
     var partEl = document.createElement('span');
-    partEl.className = 'part' + (part.heart ? ' heart' : '') + (part.letters.length > 1 ? ' multi' : '');
+    partEl.className = part.heart ? 'part heart' : 'part';
     var lettersEl = document.createElement('span');
     lettersEl.className = 'letters';
     part.letters.split('').forEach(function(ch) {

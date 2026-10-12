@@ -172,7 +172,7 @@ button, textarea { font-family: inherit; }
 /* Each part is a column: letters, then a heart under heart parts */
 .part { display: flex; flex-direction: column; align-items: center; }
 .letters { padding-bottom: 0.12em; }
-.part.heart.multi .letters {
+.part.heart .letters {
   /* Inset underline, so neighbouring heart parts get separate lines */
   background: linear-gradient(#fff, #fff) center bottom / calc(100% - 0.1em) 0.03em no-repeat;
 }
