@@ -10,16 +10,42 @@
 </head>
 <body>
 
-<div id="setup">
+<form id="setup">
   <h1>Practice: Reading Words</h1>
-  <p id="setup-hint">Type or paste your own words below. Then press Start!</p>
-  <textarea id="word-input" spellcheck="false"></textarea>
+
+  <fieldset class="field">
+    <legend class="field-label">Fundations level</legend>
+    <div class="segmented" id="level-picker"></div>
+  </fieldset>
+
+  <div class="field">
+    <label class="field-label" for="unit-select">Current unit</label>
+    <select id="unit-select" name="unit"></select>
+  </div>
+
+  <fieldset class="field">
+    <legend class="field-label">Words from</legend>
+    <div class="segmented">
+      <label><input type="radio" name="scope" value="upto" checked><span>Everything up to this unit</span></label>
+      <label><input type="radio" name="scope" value="only"><span>This unit only</span></label>
+    </div>
+  </fieldset>
+
+  <fieldset class="field">
+    <legend class="field-label">Word types</legend>
+    <div class="chips">
+      <label><input type="checkbox" name="types" value="trick" checked><span>❤️ Trick <em data-count="trick"></em></span></label>
+      <label><input type="checkbox" name="types" value="decodable" checked><span>Decodable <em data-count="decodable"></em></span></label>
+      <label><input type="checkbox" name="types" value="nonsense" checked><span>Nonsense <em data-count="nonsense"></em></span></label>
+    </div>
+  </fieldset>
+
   <div id="count-row">
     <label id="count-label" for="count-slider">Practise <strong id="count-num"></strong> of <span id="total-num"></span> words</label>
-    <input type="range" id="count-slider" min="1">
+    <input type="range" id="count-slider" name="count" min="1">
   </div>
-  <button class="btn btn-glass" id="start-btn">Start ▶</button>
-</div>
+  <button type="submit" class="btn btn-glass" id="start-btn" disabled>Start ▶</button>
+</form>
 
 <div id="practice">
   <button class="btn btn-glass" id="reset-btn">✕ Reset words</button>
@@ -43,7 +69,8 @@
   <button class="btn btn-glass" id="start-over-btn" hidden>← Start over</button>
 </div>
 
-<script src="words.js"></script>
+<script src="fundations-word-lists.js"></script>
+<script src="trick-word-hearts.js"></script>
 <script src="sound.js"></script>
 <script src="celebrations.js"></script>
 <script src="app.js"></script>
