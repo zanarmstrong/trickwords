@@ -1,0 +1,2695 @@
+[
+  {
+    "word": "the",
+    "mapping": "th[e]",
+    "graphemes": [
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "e",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "said",
+    "mapping": "s[ai]d",
+    "graphemes": [
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "ai",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ai",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "to",
+    "mapping": "t[o]",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "do",
+    "mapping": "d[o]",
+    "graphemes": [
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "of",
+    "mapping": "[o][f]",
+    "graphemes": [
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "f",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "f",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "from",
+    "mapping": "fr[o]m",
+    "graphemes": [
+      {
+        "letters": "f",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "m",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "are",
+    "mapping": "ar[e]",
+    "graphemes": [
+      {
+        "letters": "ar",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "e",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "was",
+    "mapping": "w[a]s",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "what",
+    "mapping": "wh[a]t",
+    "graphemes": [
+      {
+        "letters": "wh",
+        "heart": false
+      },
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "your",
+    "mapping": "y[ou]r",
+    "graphemes": [
+      {
+        "letters": "y",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "r",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "goes",
+    "mapping": "go[es]",
+    "graphemes": [
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": false
+      },
+      {
+        "letters": "es",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "es",
+        "start_index": 2,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "says",
+    "mapping": "s[ay]s",
+    "graphemes": [
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "ay",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ay",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "their",
+    "mapping": "th[eir]",
+    "graphemes": [
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "eir",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "eir",
+        "start_index": 2,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "were",
+    "mapping": "wer[e]",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "e",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "talk",
+    "mapping": "t[al]k",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "al",
+        "heart": true
+      },
+      {
+        "letters": "k",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "al",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "walk",
+    "mapping": "w[al]k",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "al",
+        "heart": true
+      },
+      {
+        "letters": "k",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "al",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "could",
+    "mapping": "c[oul]d",
+    "graphemes": [
+      {
+        "letters": "c",
+        "heart": false
+      },
+      {
+        "letters": "oul",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oul",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "would",
+    "mapping": "w[oul]d",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "oul",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oul",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "should",
+    "mapping": "sh[oul]d",
+    "graphemes": [
+      {
+        "letters": "sh",
+        "heart": false
+      },
+      {
+        "letters": "oul",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oul",
+        "start_index": 2,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "there",
+    "mapping": "th[ere]",
+    "graphemes": [
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "ere",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ere",
+        "start_index": 2,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "where",
+    "mapping": "wh[ere]",
+    "graphemes": [
+      {
+        "letters": "wh",
+        "heart": false
+      },
+      {
+        "letters": "ere",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ere",
+        "start_index": 2,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "who",
+    "mapping": "[wh][o]",
+    "graphemes": [
+      {
+        "letters": "wh",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "wh",
+        "start_index": 0,
+        "end_index": 2
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "one",
+    "mapping": "[o]n[e]",
+    "graphemes": [
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "e",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "once",
+    "mapping": "[o]nce",
+    "graphemes": [
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "ce",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "two",
+    "mapping": "t[w][o]",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "w",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "w",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "does",
+    "mapping": "d[o][es]",
+    "graphemes": [
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "es",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "es",
+        "start_index": 2,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "many",
+    "mapping": "m[a]ny",
+    "graphemes": [
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "any",
+    "mapping": "[a]ny",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "been",
+    "mapping": "b[ee]n",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "ee",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ee",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "into",
+    "mapping": "int[o]",
+    "graphemes": [
+      {
+        "letters": "i",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "friend",
+    "mapping": "fr[ie]nd",
+    "graphemes": [
+      {
+        "letters": "f",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "ie",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ie",
+        "start_index": 2,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "because",
+    "mapping": "bec[au]s[e]",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": false
+      },
+      {
+        "letters": "c",
+        "heart": false
+      },
+      {
+        "letters": "au",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "au",
+        "start_index": 3,
+        "end_index": 5
+      },
+      {
+        "grapheme": "e",
+        "start_index": 6,
+        "end_index": 7
+      }
+    ]
+  },
+  {
+    "word": "woman",
+    "mapping": "w[o]m[a]n",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "a",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "women",
+    "mapping": "w[o]m[e]n",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "e",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "move",
+    "mapping": "m[o]v[e]",
+    "graphemes": [
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "v",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "e",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "both",
+    "mapping": "b[o]th",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "four",
+    "mapping": "f[our]",
+    "graphemes": [
+      {
+        "letters": "f",
+        "heart": false
+      },
+      {
+        "letters": "our",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "our",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "fourth",
+    "mapping": "f[our]th",
+    "graphemes": [
+      {
+        "letters": "f",
+        "heart": false
+      },
+      {
+        "letters": "our",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "our",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "people",
+    "mapping": "p[eo]ple",
+    "graphemes": [
+      {
+        "letters": "p",
+        "heart": false
+      },
+      {
+        "letters": "eo",
+        "heart": true
+      },
+      {
+        "letters": "p",
+        "heart": false
+      },
+      {
+        "letters": "le",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "eo",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "pretty",
+    "mapping": "pr[e]tty",
+    "graphemes": [
+      {
+        "letters": "p",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      },
+      {
+        "letters": "tt",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "e",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "nothing",
+    "mapping": "n[o]thing",
+    "graphemes": [
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "i",
+        "heart": false
+      },
+      {
+        "letters": "ng",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "other",
+    "mapping": "[o]ther",
+    "graphemes": [
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "another",
+    "mapping": "[a]n[o]ther",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "mother",
+    "mapping": "m[o]ther",
+    "graphemes": [
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "brother",
+    "mapping": "br[o]ther",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "today",
+    "mapping": "t[o]day",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "ay",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "very",
+    "mapping": "v[er]y",
+    "graphemes": [
+      {
+        "letters": "v",
+        "heart": false
+      },
+      {
+        "letters": "er",
+        "heart": true
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "er",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "above",
+    "mapping": "[a]b[o]v[e]",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "v",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      },
+      {
+        "grapheme": "e",
+        "start_index": 4,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "among",
+    "mapping": "[a]m[o]ng",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "ng",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "again",
+    "mapping": "[a]g[ai]n",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "ai",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "ai",
+        "start_index": 2,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "against",
+    "mapping": "[a]g[ai]nst",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "ai",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "ai",
+        "start_index": 2,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "always",
+    "mapping": "[a]lways",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "ay",
+        "heart": false
+      },
+      {
+        "letters": "s",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "almost",
+    "mapping": "[a]lmost",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": false
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "floor",
+    "mapping": "fl[oor]",
+    "graphemes": [
+      {
+        "letters": "f",
+        "heart": false
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "oor",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oor",
+        "start_index": 2,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "poor",
+    "mapping": "p[oor]",
+    "graphemes": [
+      {
+        "letters": "p",
+        "heart": false
+      },
+      {
+        "letters": "oor",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oor",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "door",
+    "mapping": "d[oor]",
+    "graphemes": [
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "oor",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "oor",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "won",
+    "mapping": "w[o]n",
+    "graphemes": [
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "son",
+    "mapping": "s[o]n",
+    "graphemes": [
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "month",
+    "mapping": "m[o]nth",
+    "graphemes": [
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "th",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "hour",
+    "mapping": "[h]our",
+    "graphemes": [
+      {
+        "letters": "h",
+        "heart": true
+      },
+      {
+        "letters": "ou",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "h",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "minute",
+    "mapping": "min[u]t[e]",
+    "graphemes": [
+      {
+        "letters": "m",
+        "heart": false
+      },
+      {
+        "letters": "i",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "u",
+        "heart": true
+      },
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "u",
+        "start_index": 3,
+        "end_index": 4
+      },
+      {
+        "grapheme": "e",
+        "start_index": 5,
+        "end_index": 6
+      }
+    ]
+  },
+  {
+    "word": "Monday",
+    "mapping": "M[o]nday",
+    "graphemes": [
+      {
+        "letters": "M",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "ay",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "Wednesday",
+    "mapping": "We[dn][es]day",
+    "graphemes": [
+      {
+        "letters": "W",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": false
+      },
+      {
+        "letters": "dn",
+        "heart": true
+      },
+      {
+        "letters": "es",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "ay",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "dn",
+        "start_index": 2,
+        "end_index": 4
+      },
+      {
+        "grapheme": "es",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ]
+  },
+  {
+    "word": "February",
+    "mapping": "Febru[ar]y",
+    "graphemes": [
+      {
+        "letters": "F",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": false
+      },
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "u",
+        "heart": false
+      },
+      {
+        "letters": "ar",
+        "heart": true
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ar",
+        "start_index": 5,
+        "end_index": 7
+      }
+    ]
+  },
+  {
+    "word": "eye",
+    "mapping": "[eye]",
+    "graphemes": [
+      {
+        "letters": "eye",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "eye",
+        "start_index": 0,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "heart",
+    "mapping": "h[ear]t",
+    "graphemes": [
+      {
+        "letters": "h",
+        "heart": false
+      },
+      {
+        "letters": "ear",
+        "heart": true
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ear",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "about",
+    "mapping": "[a]bout",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": true
+      },
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "a",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "answer",
+    "mapping": "ans[w]er",
+    "graphemes": [
+      {
+        "letters": "a",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "w",
+        "heart": true
+      },
+      {
+        "letters": "er",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "w",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "honest",
+    "mapping": "[h]onest",
+    "graphemes": [
+      {
+        "letters": "h",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": false
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "h",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "honor",
+    "mapping": "[h]onor",
+    "graphemes": [
+      {
+        "letters": "h",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "or",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "h",
+        "start_index": 0,
+        "end_index": 1
+      }
+    ]
+  },
+  {
+    "word": "truth",
+    "mapping": "tr[u]th",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "u",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "u",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "truly",
+    "mapping": "tr[u]ly",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "u",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "u",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "busy",
+    "mapping": "b[u]sy",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "u",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "u",
+        "start_index": 1,
+        "end_index": 2
+      }
+    ]
+  },
+  {
+    "word": "build",
+    "mapping": "b[ui]ld",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "ui",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ui",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "built",
+    "mapping": "b[ui]lt",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "ui",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ui",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "sure",
+    "mapping": "[s][u]r[e]",
+    "graphemes": [
+      {
+        "letters": "s",
+        "heart": true
+      },
+      {
+        "letters": "u",
+        "heart": true
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "s",
+        "start_index": 0,
+        "end_index": 1
+      },
+      {
+        "grapheme": "u",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "e",
+        "start_index": 3,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "laugh",
+    "mapping": "l[au][gh]",
+    "graphemes": [
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "au",
+        "heart": true
+      },
+      {
+        "letters": "gh",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "au",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "grapheme": "gh",
+        "start_index": 3,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "whom",
+    "mapping": "[wh][o]m",
+    "graphemes": [
+      {
+        "letters": "wh",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "m",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "wh",
+        "start_index": 0,
+        "end_index": 2
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "whose",
+    "mapping": "[wh][o]s[e]",
+    "graphemes": [
+      {
+        "letters": "wh",
+        "heart": true
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "wh",
+        "start_index": 0,
+        "end_index": 2
+      },
+      {
+        "grapheme": "o",
+        "start_index": 2,
+        "end_index": 3
+      },
+      {
+        "grapheme": "e",
+        "start_index": 4,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "toward",
+    "mapping": "t[o]w[ar]d",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "o",
+        "heart": true
+      },
+      {
+        "letters": "w",
+        "heart": false
+      },
+      {
+        "letters": "ar",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "o",
+        "start_index": 1,
+        "end_index": 2
+      },
+      {
+        "grapheme": "ar",
+        "start_index": 3,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "through",
+    "mapping": "thr[ough]",
+    "graphemes": [
+      {
+        "letters": "th",
+        "heart": false
+      },
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "ough",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ough",
+        "start_index": 3,
+        "end_index": 7
+      }
+    ]
+  },
+  {
+    "word": "learn",
+    "mapping": "l[ear]n",
+    "graphemes": [
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "ear",
+        "heart": true
+      },
+      {
+        "letters": "n",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ear",
+        "start_index": 1,
+        "end_index": 4
+      }
+    ]
+  },
+  {
+    "word": "earth",
+    "mapping": "[ear]th",
+    "graphemes": [
+      {
+        "letters": "ear",
+        "heart": true
+      },
+      {
+        "letters": "th",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ear",
+        "start_index": 0,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "early",
+    "mapping": "[ear]ly",
+    "graphemes": [
+      {
+        "letters": "ear",
+        "heart": true
+      },
+      {
+        "letters": "l",
+        "heart": false
+      },
+      {
+        "letters": "y",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ear",
+        "start_index": 0,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "buy",
+    "mapping": "b[uy]",
+    "graphemes": [
+      {
+        "letters": "b",
+        "heart": false
+      },
+      {
+        "letters": "uy",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "uy",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "guy",
+    "mapping": "g[uy]",
+    "graphemes": [
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "uy",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "uy",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "guess",
+    "mapping": "g[ue]ss",
+    "graphemes": [
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "ue",
+        "heart": true
+      },
+      {
+        "letters": "ss",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ue",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "guest",
+    "mapping": "g[ue]st",
+    "graphemes": [
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "ue",
+        "heart": true
+      },
+      {
+        "letters": "s",
+        "heart": false
+      },
+      {
+        "letters": "t",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ue",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "guide",
+    "mapping": "g[ui]de",
+    "graphemes": [
+      {
+        "letters": "g",
+        "heart": false
+      },
+      {
+        "letters": "ui",
+        "heart": true
+      },
+      {
+        "letters": "d",
+        "heart": false
+      },
+      {
+        "letters": "e",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ui",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "young",
+    "mapping": "y[ou]ng",
+    "graphemes": [
+      {
+        "letters": "y",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "ng",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "touch",
+    "mapping": "t[ou]ch",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "ch",
+        "heart": false
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 1,
+        "end_index": 3
+      }
+    ]
+  },
+  {
+    "word": "enough",
+    "mapping": "en[ou][gh]",
+    "graphemes": [
+      {
+        "letters": "e",
+        "heart": false
+      },
+      {
+        "letters": "n",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "gh",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 2,
+        "end_index": 4
+      },
+      {
+        "grapheme": "gh",
+        "start_index": 4,
+        "end_index": 6
+      }
+    ]
+  },
+  {
+    "word": "tough",
+    "mapping": "t[ou][gh]",
+    "graphemes": [
+      {
+        "letters": "t",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "gh",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "grapheme": "gh",
+        "start_index": 3,
+        "end_index": 5
+      }
+    ]
+  },
+  {
+    "word": "rough",
+    "mapping": "r[ou][gh]",
+    "graphemes": [
+      {
+        "letters": "r",
+        "heart": false
+      },
+      {
+        "letters": "ou",
+        "heart": true
+      },
+      {
+        "letters": "gh",
+        "heart": true
+      }
+    ],
+    "heart_parts": [
+      {
+        "grapheme": "ou",
+        "start_index": 1,
+        "end_index": 3
+      },
+      {
+        "grapheme": "gh",
+        "start_index": 3,
+        "end_index": 5
+      }
+    ]
+  }
+]
